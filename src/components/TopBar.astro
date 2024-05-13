@@ -1,0 +1,140 @@
+---
+const { hasBanner } = Astro.props;
+
+const currentPath = new URL(Astro.request.url).pathname;
+// const currentPath = pathname.slice(1);
+// console.log(hasBanner);
+
+// const hasBanner = true;
+const menus = [
+  {
+    title: "Home",
+    url: "/",
+  },
+  {
+    title: "What we do",
+    url: "/what-we-do",
+  },
+  {
+    title: "Meet the team",
+    url: "/meet-the-team",
+  },
+  {
+    title: "Our Partners",
+    url: "/our-partners",
+  },
+  {
+    title: "Our Values",
+    url: "/our-values",
+  },
+];
+---
+
+<div class="address-bar">
+  <div class="top-bar-wrapper p-3">
+    <div class="top-bar container inline-flex">
+      <div class="inline-flex tb-wrapper">
+        <span class="tb-item"
+          ><ion-icon name="call" class="text-green-600 text-sm"></ion-icon><span
+            class="text-white font-bold ml-2"
+          >
+            +1-720-234-2435</span
+          ></span
+        >
+        <span class="tb-item"
+          ><ion-icon name="mail" class="text-green-600 text-sm"></ion-icon><span
+            class="text-white font-bold ml-2"
+          >
+            ecobabe@climatestrategiesgroup.com</span
+          ></span
+        >
+        <span class="tb-item"
+          ><ion-icon name="location" class="text-green-600 text-sm"
+          ></ion-icon><span class="text-white font-bold ml-2">
+            Climate Strategies, LLC - 116 W. Elm St., Louisville, CO 80027</span
+          ></span
+        >
+      </div>
+      <!-- <div class="inline-flex">
+        <a href="" aria-label="Facebook"
+          ><ion-icon name="logo-facebook" class="text-white text-xl mx-3"
+          ></ion-icon></a
+        >
+        <a href="" aria-label="Instagram"
+          ><ion-icon name="logo-instagram" class="text-white text-xl mx-3"
+          ></ion-icon></a
+        >
+        <a href="" aria-label="Linkedin"
+          ><ion-icon name="logo-linkedin" class="text-white text-xl mx-3"
+          ></ion-icon></a
+        >
+        <a href="" aria-label="Twitter"
+          ><ion-icon name="logo-twitter" class="text-white text-xl mx-3"
+          ></ion-icon></a
+        > -->
+    </div>
+  </div>
+</div>
+<div class="nav-section">
+  <div class="menu-bar">
+    <div class="container flex logobar">
+      <div class="logo">
+        <a href="/"
+          ><div class="logobox">
+            <span><span>C</span>limate</span>
+            <span><span>S</span>trategies</span>
+          </div>
+        </a>
+
+        <!-- <img src="/src/images/logonew.png" width="169" height="auto"/></a> -->
+      </div>
+      <nav class="nav">
+        <input class="checkbox-toggle" type="checkbox" />
+        <div class="hamburger">
+          <div></div>
+        </div>
+        <ul class="inline-list inline-flex menu">
+          {
+            menus.map((menu) => (
+              <li class="menu-item">
+                <a
+                  class={currentPath === menu.url ? "active" : ""}
+                  href={menu.url}
+                >
+                  {menu.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+  {
+    hasBanner && (
+      <div class="banner">
+        <div class="container">
+          <div class="banner-info">
+            <div class="blurb">natural science</div>
+            <h1 class="text-[76px] text-white font-bold mb-[30px] leading-[87px]">
+              Navigating Climate Challenges, <span class="green">Together</span>
+            </h1>
+            <p class="text-white text-[18px] leading-[30px] mb-[30px]">
+              Delivering actionable insights and tailored solutions to empower
+              decision-makers and communities in addressing climate issues.
+            </p>
+            <div class="flex banner-buttons">
+              <a class="button primary" href="/">
+                Join Us
+              </a>
+              <a class="button" href="/">
+                Get Started
+              </a>
+            </div>
+          </div>
+          <div />
+        </div>
+      </div>
+    )
+  }
+</div>

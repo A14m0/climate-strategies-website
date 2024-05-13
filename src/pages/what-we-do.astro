@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import HomeBanner from '../components/HomeBanner.astro';
+import Title from "../components/Title.astro";
+import Info from "../components/Info.astro";
+import Footer from "../components/Footer.astro";
+import TopBar from "../components/TopBar.astro";
+import ImageCard from "../components/ImageCard.astro";
+
+import ocean from "../images/ocean.jpg";
+import agriculture from "../images/agriculture.jpg";
+import energy from "../images/energy.jpg";
+import health from "../images/health.webp";
+// const imageDesc = {
+//   'water': [
+//     'Precipitation',
+//     'Rainfall Intensity',
+//     'Flooding: River and Flash',
+//     'Drought Risk',
+//     'Temperature Ranges',
+//     'Extreme Quality',
+//     'Tropical Cyclone Risk'
+//   ],
+//   'agriculture': [
+//     'Temperature Ranges',
+//     'Extreme Temperatures',
+//     'Precipitation Trends',
+//     'Drought Risk',
+//     'Flooding: River and Flash',
+//     'Water Quality',
+//     'Tropical Cyclone Risk'
+//   ],
+//   'Energy': [
+//     'Temperature Ranges',
+//   ]
+// }
+
+const imageDesc = {
+  water: [
+    "Water Scarcity",
+    "Wave Heights",
+    "Harbor Water Levels",
+    "Storm Surge",
+  ],
+  agriculture: [
+    "Optimal Crop Ranges",
+    "Pest and Disease Risk",
+    "Fire Risk",
+    "Water Scarcity",
+  ],
+  energy: ["Water Temperatures", "Wintry Precipitation", "Fire Risk"],
+  health: ["Vector-borne Disease Risk", "Fire Risk", "Storm Surge"],
+};
+---
+
+<Layout title="What we do | Climate Strategies">
+  <header>
+    <TopBar hasBanner={false} />
+  </header>
+  <main>
+    <div class="mini-container content-region">
+      <Title blurb="What we do" title="Empowering Informed Climate Decisions" />
+      <!-- <p>Climate Strategies, with over two decades of expertise in the international research community, provides dynamic solutions tailored to deliver in-depth insights into climate science. We specialize in addressing a wide spectrum of practical applications by engaging closely with stakeholders and decision-makers. This collaborative approach involves identifying critical weather and climate challenges, adapting scientific data and concepts to suit specific needs, and ensuring the transparency of the processes involved.</p> -->
+      <!-- <p>We offer comprehensive services including:</p> -->
+
+      <div class="grid grid-cols-1 gap-4">
+        <Info
+          icon="search"
+          title="Translation of Climate Change Science to Stakeholders and Decision-Makers"
+          description="Climate change can alters the weather and climate context as we have experienced and understand it.  The trend towards a warmer world comes with many distinct and complex “flavors” that need to be recognized, explained, and linked across various scales in space and time. We word to translate what those trends and  'flavors' are going to mean for  stakeholders and decision-makers, so that they  can better identify their changing exposure to different hazards."
+        />
+        <Info
+          icon="trending-up-outline"
+          title="Climate Hazard and Risk"
+          description="We have extensive experience in identifying and quantifying the evolving nature of a broad range of climate change hazards for different sector applications.  We work with our clients to understand their vulnerabilities.   This inherently iterative process is founded on jointly establishing a solid understanding of how weather and climate influence the systems that are to be managed.  We can then develop broad suites of tailored climate indicators and tools that inform the different decision environments to allow stakeholders to better navigate the response space to manage risk."
+        />
+        <Info
+          icon="stats-chart-outline"
+          title="Multi-scale assessments in time domain"
+          description=`Since weather and climate conditions are reasonably predictable within the sub-seasonal to seasonal timeframe,    preparatory action can be taken.  Using an  integrated approach, we work together with stakeholders to design information flows that can provide early warnings about weather/climate conditions that pose severe hazards and risks.  Building on established forecast skills that use both weather and climate mean conditions, as well as select extremes, early warnings can then enable actions to reduce exposures and impacts. 
+ Identifying the impacts of climate change involves the interpretation of observed trends to separate regional climate variability and extremes from robust trends. This requires a broad understanding of how local and regional variability is embedded in the broader climate context and which mechanisms could be responsible for the evolving climate. We build on our deep expertise in global to regional climate dynamics and the evolving factors that be dominating climate outcomes over different timescales, including the assessment of likely robustness of long-term projections along scenarios.<br/>We work with clients to identify and select sequences of events with both context and event characteristics, chosen in a flexible way to inform the evaluation of changes in hazard, exposure, vulnerability, and risk portfolios. The use of contrasting story lines, together with a focus on means as well as extremes, allows organizations to recognize areas of vulnerabilities and thus risk.`
+        />
+        <Info
+          icon="thermometer-outline"
+          title="Multi-scale assessments in spatial domain"
+          description="Recognizing how variability at the local scale is embedded in the fluctuations and trends of the large-scale circulation is a complex undertaking. We work to carefully uncover these different elements, an approach  central to making the spatially hierarchical context more accessible for stakeholders. This fundamental step of translating the multi-scale physical processes in an approachable way to stakeholders is critical for allowing them to work through evaluation of their full value-chains to the evolving weather and climate. Our team has broad expertise in working with sectors, as well as individual organizations, to identify how climate variability and change can pose different levels of risk."
+        />
+      </div>
+
+      <div class="col-md-4 col-sm-2">
+        <ImageCard
+          image={ocean}
+          imageAlt="water"
+          icon="water-outline"
+          title="Water Sector"
+          description={imageDesc["water"]}
+        />
+        <ImageCard
+          image={agriculture}
+          imageAlt="agriculture"
+          icon="leaf-outline"
+          title="Agriculture"
+          description={imageDesc["agriculture"]}
+        />
+        <ImageCard
+          image={energy}
+          imageAlt="energy"
+          icon="sunny-outline"
+          title="Energy"
+          description={imageDesc["energy"]}
+        />
+        <ImageCard
+          image={health}
+          imageAlt="health"
+          icon="fitness-outline"
+          title="Health"
+          description={imageDesc["health"]}
+        />
+      </div>
+      <!-- <p>Our approach leverages extensive cross-sectoral experience, enabling us to provide practical, context-specific guidance that is attuned to the relevant timescales and processes. A crucial part of our success lies in fostering an understanding of fundamental climate science concepts among our clients, building confidence and accurately acknowledging uncertainties in the data.</p>			</p> -->
+    </div>
+  </main>
+  <Footer />
+</Layout>
+<!-- <ion-icon name="thermometer-outline"></ion-icon><ion-icon name="thunderstorm-outline"></ion-icon> -->

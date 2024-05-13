@@ -1,0 +1,16 @@
+---
+const { icon, title, description } = Astro.props;
+---
+
+<div class="info">
+  <div class="info-title flex justify-start items-center">
+    <div class="card-icon">
+      <ion-icon name={icon} class="green"></ion-icon>
+    </div>
+    <h3 class="text-[18px] font-bold">
+      {title}
+    </h3>
+  </div>
+
+  <p>{description}</p>
+</div>

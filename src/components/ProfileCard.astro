@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets"
+// import { getImage } from "astro:assets";
+
+const { image, imageAlt, name, title, email, description } = Astro.props;
+// const optimizedImg = await getImage({src: image, format: 'webp'});
+// console.log(optimizedImg);
+// import imageData from image;
+---
+
+<div class="profile-card flex">
+  <div class="profile-pic">
+    <!-- <img src={image} alt={imageAlt} /> -->
+    <Image src={image} alt={imageAlt} width="366" height="400" loading="lazy" decoding="async" />
+    <div class="profileInfoWrapper">
+      <div class="profileInfo">
+        <div class="profileName">{name}</div>
+        <div class="profileTitle">{title}</div>
+        <div class="profileEmail">{email}</div>
+      </div>
+    </div>
+  </div>
+  <div class="profileDesc">
+    <p>{description}</p>
+  </div>
+</div>

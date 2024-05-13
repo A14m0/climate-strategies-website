@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import HomeBanner from '../components/HomeBanner.astro';
+import Title from "../components/Title.astro";
+import Info from "../components/Info.astro";
+import Footer from "../components/Footer.astro";
+import TopBar from "../components/TopBar.astro";
+import ImageCard from "../components/ImageCard.astro";
+import ProfileCard from "../components/ProfileCard.astro";
+import Card from "../components/Card.astro";
+import Partner from "../components/Partner.astro";
+
+// const imageDesc = {
+//   'water': [
+//     'Precipitation',
+//     'Rainfall Intensity',
+//     'Flooding: River and Flash',
+//     'Drought Risk',
+//     'Temperature Ranges',
+//     'Extreme Quality',
+//     'Tropical Cyclone Risk'
+//   ],
+//   'agriculture': [
+//     'Temperature Ranges',
+//     'Extreme Temperatures',
+//     'Precipitation Trends',
+//     'Drought Risk',
+//     'Flooding: River and Flash',
+//     'Water Quality',
+//     'Tropical Cyclone Risk'
+//   ],
+//   'Energy': [
+//     'Temperature Ranges',
+//   ]
+// }
+
+const imageDesc = {
+  caspar:
+    "Caspar Ammann has 20+ years of experience in the field of analysis and modeling of global to regional climates across a range of timescales. As a scientist at the National Center for Atmospheric Research, he led the development of the Climate Risk Management engine (CRMe), a toolset designed to access, evaluate, and translate large climate archives into useful and usable products for applications in different sectors where they serve in climate risk screening and impacts assessments. Most recently, Caspar has assisted the World Bank’s Climate Change Knowledge Portal (WB-CCKP) to upgrade the portal to the latest projections of climate change information and to broaden its products for more detailed analysis of climate variability and change.  He has a Ph.D. in Geosciences from the University of Massachusetts, and a Masters in Geography, Geology and Mineralogy from the University of Bern, Switzerland. ",
+  emily:
+    "Emily CoBabe-Ammann serve as project manager and principle strategic developer for Climate Strategies.  In addition, she is the Chief Research Strategist for the University of Colorado Boulder, where she works with research institutes, departments and centers to develop new research directions that align to national and international interests.  She focuses on larger interdisciplinary research efforts and has supported the capture of more than $210M of extramural research in the last 7 years.   Prior to coming to CU, she was the Director of UCAR Community Programs where she managed a $45M portfolio of education, training, data and science support programs.  She has a Ph.D. in Earth and Planetary Sciences from Harvard University.",
+  roelof:
+    "Roelof Burger, with over two decades of experience in meteorology, notably excels in operational forecasting, earth observation, weather modeling, and atmospheric research. His proficiency in data analysis, programming languages, and visualisation tools significantly contributes to the advancement of weather radar and satellite data applications, crucial for various sectors including disaster risk reduction, agriculture, and water management. Burger's extensive fieldwork, involving the installation, maintenance, and operation of over 50 weather radars globally, underpins his commitment to enhancing multi-hazard early warning systems. ",
+  ashok:
+    "With over a decade of experience in web development, Ashok's  journey has been deeply rooted in working with Drupal, where he's had the chance to contribute to over 30 projects.   His roles have varied, from consulting on web enhancements and performance improvements for the World Bank to optimizing project delivery systems at Cognizant. He enjoys the challenges of integrating complex APIs and developing custom modules to meet project-specific needs, which has been crucial in his efforts to streamline and innovate workflows.  Ashok holds a Bachelor of Engineering in Computer Science from Anna University. His  approach to work is guided by a passion for technology and its potential to address challenges. He strives to apply his technical knowledge in ways that contribute positively to his projects and the wider community.",
+};
+---
+
+<Layout title="Our partners | Climate Strategies">
+  <header>
+    <TopBar hasBanner={false} />
+  </header>
+  <main>
+    <div class="mini-container content-region">
+      <Title blurb="Our Partners" title="Collaborating With ..." />
+      <!-- <p>Climate Strategies, with over two decades of expertise in the international research community, provides dynamic solutions tailored to deliver in-depth insights into climate science. We specialize in addressing a wide spectrum of practical applications by engaging closely with stakeholders and decision-makers. This collaborative approach involves identifying critical weather and climate challenges, adapting scientific data and concepts to suit specific needs, and ensuring the transparency of the processes involved.</p> -->
+      <!-- <p>We offer comprehensive services including:</p> -->
+      <div class="col-md-3 col-sm-2">
+        <Partner
+          image="/src/images/partners/dai.png"
+          title="Development Alternatives, Inc."
+          description="Establishing foundational climate data sets for comparative and analytical purposes."
+        />
+        <Partner
+          image="/src/images/partners/idb.png"
+          title="Inter-American Development Bank"
+          description="Identifying and interpreting patterns in climate data over time."
+        />
+        <Partner
+          image="/src/images/partners/kaust.png"
+          title="KAUST"
+          description="Utilizing multiple models to predict future climate scenarios."
+        />
+        <Partner
+          image="/src/images/partners/ncar.png"
+          title="NCAR-UCAR"
+          description="Developing tools that dynamically represent climate metrics and critical limits."
+        />
+        <Partner
+          image="/src/images/partners/cckp.png"
+          title="Climate Change Knowlege Portal"
+          description="Assessing the effects of climate change on specific industries and sectors."
+        />
+        <Partner
+          image="/src/images/partners/atlantic.webp"
+          title="Atlantic Council"
+          description="Enhancing understanding and decision-making capabilities through targeted educational programs and effective communication strategies for stakeholders and policymakers."
+        />
+      </div>
+
+      <!-- <p>Our approach leverages extensive cross-sectoral experience, enabling us to provide practical, context-specific guidance that is attuned to the relevant timescales and processes. A crucial part of our success lies in fostering an understanding of fundamental climate science concepts among our clients, building confidence and accurately acknowledging uncertainties in the data.</p>			</p> -->
+    </div>
+  </main>
+  <Footer />
+</Layout>
+<!-- <ion-icon name="thermometer-outline"></ion-icon><ion-icon name="thunderstorm-outline"></ion-icon> -->

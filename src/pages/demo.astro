@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+// import HomeBanner from '../components/HomeBanner.astro';
+import Title from "../components/Title.astro";
+import Footer from "../components/Footer.astro";
+import TopBar from "../components/TopBar.astro";
+import Earth from "/src/images/earth.avif";
+// import { ThreeGlobe, THREE } from "//unpkg.com/three-globe";
+
+// const myGlobe = new ThreeGlobe().globeImageUrl(myImageUrl).pointsData(myData);
+
+// const myScene = new THREE.Scene();
+// myScene.add(myGlobe);
+---
+
+<!-- <script src="//unpkg.com/three-globe"></script> -->
+<Layout title="Demo | Climate Strategies">
+  <header>
+    <TopBar hasBanner={false} />
+  </header>
+  <main>
+    <div class="mini-container content-region">
+      <Title blurb="Demo" title="Demo" />
+      <!-- <p>Climate Strategies, with over two decades of expertise in the international research community, provides dynamic solutions tailored to deliver in-depth insights into climate science. We specialize in addressing a wide spectrum of practical applications by engaging closely with stakeholders and decision-makers. This collaborative approach involves identifying critical weather and climate challenges, adapting scientific data and concepts to suit specific needs, and ensuring the transparency of the processes involved.</p> -->
+      <!-- <p>We offer comprehensive services including:</p> -->
+      <div class="demo-region flex items-center"></div>
+
+      <!-- <p>Our approach leverages extensive cross-sectoral experience, enabling us to provide practical, context-specific guidance that is attuned to the relevant timescales and processes. A crucial part of our success lies in fostering an understanding of fundamental climate science concepts among our clients, building confidence and accurately acknowledging uncertainties in the data.</p>			</p> -->
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<!-- <ion-icon name="thermometer-outline"></ion-icon><ion-icon name="thunderstorm-outline"></ion-icon> -->

@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+// import HomeBanner from '../components/HomeBanner.astro';
+import Title from "../components/Title.astro";
+import Footer from "../components/Footer.astro";
+import TopBar from "../components/TopBar.astro";
+import Earth from "/src/images/earth.avif";
+---
+
+<Layout title="Welcome to Astro.">
+  <header>
+    <TopBar hasBanner={false} />
+  </header>
+  <main>
+    <div class="mini-container content-region">
+      <Title blurb="Our Values" title="Our Ethical Compass" />
+      <!-- <p>Climate Strategies, with over two decades of expertise in the international research community, provides dynamic solutions tailored to deliver in-depth insights into climate science. We specialize in addressing a wide spectrum of practical applications by engaging closely with stakeholders and decision-makers. This collaborative approach involves identifying critical weather and climate challenges, adapting scientific data and concepts to suit specific needs, and ensuring the transparency of the processes involved.</p> -->
+      <!-- <p>We offer comprehensive services including:</p> -->
+      <div class="values-content flex items-center">
+        <Image src={Earth} alt={"earth"} width={300} />
+        <!-- <img src="/src/images/earth.avif" alt="earth" width="300px" /> -->
+        <div class="desc">
+          <p>
+            Climate change is and will impact populations around the world, and
+            the poorest disproportionally so. At Climate Strategies, we are
+            committed to developing climate products and risk assessments for
+            the global community to support decision makers and local
+            communities as they prepare for their future. We work with
+            governments, non-governmental organizations, development banks and
+            companies to support climate decision making at all levels, using
+            the best climate data and projections available. Key to our approach
+            is the recognition that training and education is a critical step
+            that connects end users to these powerful tools, enabling them to
+            best support their communities with tailored climate mitigation
+            approaches.
+          </p>
+        </div>
+      </div>
+
+      <!-- <p>Our approach leverages extensive cross-sectoral experience, enabling us to provide practical, context-specific guidance that is attuned to the relevant timescales and processes. A crucial part of our success lies in fostering an understanding of fundamental climate science concepts among our clients, building confidence and accurately acknowledging uncertainties in the data.</p>			</p> -->
+    </div>
+  </main>
+  <Footer />
+</Layout>
+<!-- <ion-icon name="thermometer-outline"></ion-icon><ion-icon name="thunderstorm-outline"></ion-icon> -->

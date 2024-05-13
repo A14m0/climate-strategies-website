@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+const { image, imageAlt, icon, title, description } = Astro.props;
+---
+
+<div class="imageCard">
+  <div class="image">
+    <Image src={image} alt={imageAlt} width="328" height="340" />
+  </div>
+  <div class="contentWrapper">
+    <div class="content">
+      <div class="icon">
+        <div class="card-icon">
+          <ion-icon name={icon} class="text-green-600 text-sm text-xl"
+          ></ion-icon>
+        </div>
+      </div>
+      <div class="title">{title}</div>
+      <div class="description">
+        <ul>
+          {description.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

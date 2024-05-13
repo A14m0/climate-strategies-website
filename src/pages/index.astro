@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HomeBanner from "../components/HomeBanner.astro";
+import Title from "../components/Title.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Welcome to Climate Strategies">
+  <HomeBanner />
+  <main>
+    <div class="mini-container content-region">
+      <Title blurb="About" title="Climate Strategies" />
+      <p>
+        Climate Strategies, with over two decades of expertise in the
+        international research community, provides dynamic solutions tailored to
+        deliver in-depth insights into climate science. We specialize in
+        addressing a wide spectrum of practical applications by engaging closely
+        with stakeholders and decision-makers. This collaborative approach
+        involves identifying critical weather and climate challenges, adapting
+        scientific data and concepts to suit specific needs, and ensuring the
+        transparency of the processes involved.
+      </p>
+      <p>We offer comprehensive services including:</p>
+      <div class="grid grid-cols-6 gap-4">
+        <Card
+          icon="search"
+          title="Baseline Climate Observations"
+          description="Establishing foundational climate data sets for comparative and analytical purposes."
+        />
+        <Card
+          icon="trending-up-outline"
+          title="Trend Analysis"
+          description="Identifying and interpreting patterns in climate data over time."
+        />
+        <Card
+          icon="stats-chart-outline"
+          title="Climate Projection Ensembles"
+          description="Utilizing multiple models to predict future climate scenarios."
+        />
+        <Card
+          icon="thermometer-outline"
+          title="Interactive Climate Indicators and Thresholds"
+          description="Developing tools that dynamically represent climate metrics and critical limits."
+        />
+        <Card
+          icon="thunderstorm-outline"
+          title="Sector-Specific Climate Impact Analysis"
+          description="Assessing the effects of climate change on specific industries and sectors."
+        />
+        <Card
+          icon="school-outline"
+          title="Education, Training, and Communication"
+          description="Enhancing understanding and decision-making capabilities through targeted educational programs and effective communication strategies for stakeholders and policymakers."
+        />
+      </div>
+      <p>
+        Our approach leverages extensive cross-sectoral experience, enabling us
+        to provide practical, context-specific guidance that is attuned to the
+        relevant timescales and processes. A crucial part of our success lies in
+        fostering an understanding of fundamental climate science concepts among
+        our clients, building confidence and accurately acknowledging
+        uncertainties in the data.
+      </p>
+    </div>
+  </main>
+</Layout>
+<Footer />
+
+<!-- <ion-icon name="thermometer-outline"></ion-icon><ion-icon name="thunderstorm-outline"></ion-icon> -->
