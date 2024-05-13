@@ -1,5 +1,5 @@
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ashokgj/climate-strategies)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/ashokgj/climate-strategies)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/ashokgj/climate-strategies)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
